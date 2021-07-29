@@ -4,6 +4,31 @@ body{
     background-image: url("bg.jpg");
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(236, 72, 99);
+    flex-direction: row-reverse;
+}
+
+.navbar-links ul {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #e0e0d3;
+    padding: 1rem;
+    display: block;
+}
+
 #main {
     background-color: #281a86;
     border-radius: 10%;
@@ -15,7 +40,7 @@ body{
     font-family:'Richard Hamilton',sans-serif;
     color:#e0e0d3;
     margin-top: 2%;
-    font-size: 8vw;
+    font-size: 14vw;
     text-align: center;
 }
 
@@ -31,6 +56,7 @@ p {
     border:10px solid #ebebe0;
     margin-bottom: 10px;
     align-items: center;
+    background-image: url(bg.jpg);
 }
 
 img {
