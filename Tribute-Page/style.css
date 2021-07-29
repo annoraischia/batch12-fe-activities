@@ -4,22 +4,22 @@ body{
 }
 
 #main {
-    background-color: #ecebf3;
+    background-color: #281a86;
     border-radius: 2%;
-    border: 1px solid #c24903;
+    border: 1px solid #03346d;
     box-shadow: 3px 3px 5px #310bbb;
 }
 
 #title, #tribute-info > h2, h3 {
-    font-family:'Roboto',sans-serif;
-    color:#6b6b47;
+    font-family:'Richard Hamilton',sans-serif;
+    color:#e0e0d3;
     margin-top: 1%;
     font-size: 8vw;
 }
 
 p {
     font-family:'Roboto';
-    color: #6b6b47;
+    color: #f1862e;
     margin-top : -5%;
     font-size: 20px;
 }
@@ -50,7 +50,7 @@ h3{
     font-size:25px;
 }
 
-#tribute-info > h2{
+#tribute-info > h3{
     font-size: 50px;
 }
 
