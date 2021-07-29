@@ -1,11 +1,12 @@
 body{
     background-color: #ee0909;
     text-align: center;
+    background-image: url("bg.jpg");
 }
 
 #main {
     background-color: #281a86;
-    border-radius: 2%;
+    border-radius: 10%;
     border: 1px solid #03346d;
     box-shadow: 3px 3px 5px #310bbb;
 }
@@ -13,8 +14,9 @@ body{
 #title, #tribute-info > h2, h3 {
     font-family:'Richard Hamilton',sans-serif;
     color:#e0e0d3;
-    margin-top: 1%;
+    margin-top: 2%;
     font-size: 8vw;
+    text-align: center;
 }
 
 p {
@@ -28,12 +30,13 @@ p {
     background-color: #f5f5f0;
     border:10px solid #ebebe0;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 img {
     box-shadow: 5px 10px 8px #a3a375;
     padding: 1%;
-    width: 200px;
+    width: 300px;
     height: auto;
     margin: auto;
 }
@@ -60,8 +63,8 @@ h3{
 }
 
 blockquote {
-    color: #80806f;
-    font-size: 25px;
+    color: #e0e0d3;
+    font-size: 40px;
     width: 35%;
     margin: auto;
     font-family:'Galdeano',sans-serif;
