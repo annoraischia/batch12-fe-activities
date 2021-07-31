@@ -67,6 +67,7 @@ h2 {
 
 h2:hover {
     background-color:cornflowerblue;
+    border-radius: 20px;
 }
 
 #img-div{
