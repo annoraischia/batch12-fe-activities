@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+.container {
+    background-color: thistle;
+    width: 50%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    justify-content: center;
+}
+
 h1 {
     font-family: 'Poppins',sans-serif;
     margin-top: 10%;
@@ -27,13 +35,16 @@ p {
     padding-left: 10px;
     outline: none;
 }
+
 h4 {
     margin-left: 0%;
 }
+
 label {
     font-family: 'Poppins',sans-serif;
     margin-left: 10%;
 }
+
 #dropdown-label #sex-label {
     margin-left: 0%;
 }
@@ -46,7 +57,7 @@ label {
 }
 
 textarea {
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 #submit {
