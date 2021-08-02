@@ -26,17 +26,9 @@
             <input id="number" name="number" type="number" required placeholder="Enter your 11-digit number" min="0" max="100" required/>
             <br>
             <br>
+            
             <label for="sex" id="sex-label">Sex:</label> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for="method" id="dropdown-label">Employment Status:</label>
-            <select id="dropdown" name="method">
-                <option value="student">Student</option>
-                <option value="postgrad">Post-graduate Student</option>
-                <option value="employed">Employed</option>
-                <option value="selfemployed">Self-Employed</option>
-                <option value="unemployed">Unemployed</option>
-                <option value="other">Other</option>
-            </select>
             <br>
             <div class="tick">
             <input type="radio" name="sex" value="male">Male<br>
@@ -44,9 +36,22 @@
             <input type="radio" name="sex" value="prefernottosay">Prefer Not to Say
             <br>
             <br>
-            <label for="checkbox" id="checkbox-label">Preferred Note-Taking Method: (check all that apply)</label>
+            </div>
+            <label for="dropdown" id="dropdown-label"> Employment Status:</label> &nbsp;
+            <br>
+            <div class="tick">
+            <select id="dropdown" name="employmentstatus">
+                <option value="student">Student</option>
+                <option value="postgradstudent">Post-Grad Student</option>
+                <option value="Employed">Employed</option>
+                <option value="Self-Employed">Self-Employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+            </div>
             <br>
             <br>
+            <div class="tick">
+            <h4 id="checkbox-label">Preferred Note-Taking Method: (check all that apply)</h4>
             <input type="checkbox" name="method1" value="Handwritten">Handwritten &nbsp;&nbsp;
             <input type="checkbox" name="method2" value="Typewritten">Typewritten &nbsp;&nbsp;
             <input type="checkbox" name="method3" value="Photocapture">Photo-capture &nbsp;&nbsp;

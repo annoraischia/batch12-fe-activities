@@ -22,25 +22,35 @@ p {
     border: none;
     border-bottom: 5px solid rgba(0,0,0,1);
     background-color:turquoise;
-    min-width: 250px;
+    max-width: 100%;
+    height: auto;
     padding-left: 10px;
     outline: none;
+}
+h4 {
+    margin-left: 0%;
 }
 label {
     font-family: 'Poppins',sans-serif;
     margin-left: 10%;
 }
+#dropdown-label #sex-label {
+    margin-left: 0%;
+}
 
 .tick {
     font-family: 'Poppins',sans-serif;
     margin-left: 10%;
+    max-width: 100%;
+    height: auto;
 }
 
 textarea {
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 #submit {
     margin-left: 10%;
+    margin-bottom: 5%;
 }
 
