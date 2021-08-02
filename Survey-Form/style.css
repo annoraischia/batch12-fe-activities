@@ -2,21 +2,41 @@
 
 body {
     background-image: url(images/bg.jpg);
+    flex-direction: row;
 }
 
 .container {
-    background-color: thistle;
+    background-color: rgba(216, 191, 216, 0.836);
+    border-radius: 5%;
     width: 46%;
+    height: 50%;
     margin-bottom: 10%;
-    margin-left: 50%;
+    margin-left: 30%;
+    margin-right: 10%;
     justify-content: center;
     margin-top: 5%;
+    
 }
 
 h1 {
     font-family: 'Poppins',sans-serif;
     margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 5%;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    transition: 0.5s;
+    }
+
+ h1:hover {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+                    0 3px 0 #ccc, 0 4px 0 #ccc,
+                    0 5px 0 #ccc, 0 6px 0 #ccc,
+                    0 7px 0 #ccc, 0 8px 0 #ccc,
+                    0 9px 0 #ccc, 0 10px 0 #ccc,
+                    0 11px 0 #ccc, 0 12px 0 #ccc,
+                    0 20px 30px rgba(0, 0, 0, 0.5);
+
 }
 
 p {
@@ -39,6 +59,13 @@ p {
     height: auto;
     padding-left: 10px;
     outline: none;
+}
+#submit {
+    background-color: turquoise;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 50px;
+    border-color: thistle;
+    font-size: 15px;
 }
 
 h4 {
@@ -68,4 +95,12 @@ textarea {
 #submit {
     margin-left: 10%;
     margin-bottom: 5%;
+}
+
+footer {
+    font-family: 'Poppins',sans-serif;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 40%;
 }
