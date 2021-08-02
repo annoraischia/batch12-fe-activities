@@ -6,8 +6,7 @@
         <title>Survey Form</title>
         <link href="style.css" rel="stylesheet">
     </head>
-
-
+    
     <body>
         <div class="container">
         <h1 id="title">Note-Taking Preference</h1>
@@ -24,7 +23,7 @@
             <input id="email" name="email" type="email" required placeholder="Enter your email" required/>
             <br>
             <label for="number" id="number-label">Phone:</label>
-            <input id="number" name="number" type="number" required placeholder="Enter your 11-digit number" min="0" max="100" required/>
+            <input id="number" name="number" type="number" required placeholder="Enter your 11-digit number" min="0" max="99999999999" pattern="[0-9]{11}" required/>
             <br>
             <br>
             
@@ -57,8 +56,8 @@
             <input type="checkbox" name="method2" value="Typewritten">Typewritten &nbsp;&nbsp;
             <input type="checkbox" name="method3" value="Photocapture">Photo-capture &nbsp;&nbsp;
             <input type="checkbox" name="method4" value="Voicerecording">Voice Recording &nbsp;&nbsp;
-            <input type="checkbox" name="method5" value="Videorecording">Video Recording &nbsp;&nbsp;
             <br>
+            <input type="checkbox" name="method5" value="Videorecording">Video Recording &nbsp;&nbsp;
             <input type="checkbox" name="method6" value="other">Other:
             <input type="text">
              &nbsp;&nbsp;

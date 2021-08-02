@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+body {
+    background-image: url(images/bg.jpg);
+}
+
 .container {
     background-color: thistle;
-    width: 50%;
+    width: 46%;
     margin-bottom: 10%;
-    margin-left: 20%;
+    margin-left: 50%;
     justify-content: center;
+    margin-top: 5%;
 }
 
 h1 {
@@ -64,4 +69,3 @@ textarea {
     margin-left: 10%;
     margin-bottom: 5%;
 }
-
