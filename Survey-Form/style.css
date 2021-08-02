@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+h1 {
+    font-family: 'Poppins',sans-serif;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+p {
+    font-family: 'Poppins',sans-serif;
+    margin-left: 10%;
+}
+
+#name, #email, #number {
+    display: block;
+    width: 30%;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1vh;
+    margin-left: 10%;
+    border: none;
+    border-bottom: 5px solid rgba(0,0,0,1);
+    background-color:turquoise;
+    min-width: 250px;
+    padding-left: 10px;
+    outline: none;
+}
+label {
+    font-family: 'Poppins',sans-serif;
+    margin-left: 10%;
+}
+
+.tick {
+    font-family: 'Poppins',sans-serif;
+    margin-left: 10%;
+}
+
+textarea {
+    margin-left: 10%;
+}
+
+#submit {
+    margin-left: 10%;
+}
+
