@@ -2,19 +2,29 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
         <title>Survey Form</title>
         <link href="style.css" rel="stylesheet">
     </head>
     
     <body>
+
+        <div>
+            <div class = 'parallax'>
+                <div id = 'heading'>
+                    <h1 id = 'title'> This Month's Workshop: <br> <div id="sub">Note-Taking</div></h1>
+                    <p id = 'description'>
+                        <u> Sign-up and let us know: </u><br>
+                        <b><i>What's your usual method of note-taking?</i></b>
+                    </p>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n8HbFgEKgS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
         <div class="container">
-        <h1 id="title">note-taking preference</h1>
-        <p id="description"><i>
-        What's your usual method of note-taking?</i>
-        </p>
-        <br>
-        <br>
         <form id="survey-form">
             <label for="name" id="name-label">Name:</label>
             <input id="name" name ="name" type="text" required placeholder="Enter your name" required/>

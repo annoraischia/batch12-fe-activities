@@ -1,9 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 
 body {
     background-image: url(images/bg.jpg);
     flex-direction: row;
 }
+
+.parallax{
+    background:url('images/bg1.jpg'),#f581c9d8;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display:flex;
+    max-width:100%;
+    height:1000px;
+    height: 45em;
+    clip-path: ellipse(100% 55% at 48% 44%);
+    }
+
+iframe {
+    margin: auto;
+    max-width: 100%; 
+}
+
 
 .container {
     background-color: rgba(216, 191, 216, 0.836);
@@ -14,42 +47,63 @@ body {
     margin-left: 30%;
     margin-right: 10%;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
     
 }
 
 h1 {
     font-family: 'Poppins',sans-serif;
-    margin-top: 10%;
-    margin-left: 5%;
+    margin-top: 20%;
+    margin-bottom: 0%;
+    margin-left: 10%;
     text-align: center;
-    color: white;
-    font-size: 45px;
+    color: whitesmoke;
+    font-size: 55px;
     transition: 0.5s;
+    width: 100%;
     }
 
- h1:hover {
-    text-shadow: 0 1px 0 turquoise, 0 2px 0 #ccc,
+ h1 {
+    text-shadow:
                     0 3px 0 turquoise, 0 4px 0 #ccc,
-                    0 5px 0 #ccc, 0 6px 0 #ccc,
-                    0 7px 0 turquoise, 0 8px 0 #ccc,
+                    0 5px 0 turquoise, 0 6px 0 #ccc,
+                    0 7px 0 #ccc, 0 8px 0 #ccc,
                     0 9px 0 #ccc, 0 10px 0 #ccc,
-                    0 11px 0 #ccc, 0 12px 0 #ccc,
+                   
                     0 20px 30px rgba(0, 0, 0, 0.5);
 
 }
 
-p {
-    font-family: 'Poppins',sans-serif;
-    margin-left: 10%;
+#sub {
+    color:whitesmoke;
+    text-shadow: 
+                    0 5px 0 turquoise, 0 6px 0 #ccc,
+                    0 7px 0 #ccc, 0 8px 0 #ccc,
+                    0 9px 0 #ccc, 0 10px 0 #ccc,
+                   
+                    0 20px 30px rgba(0, 0, 0, 0.5);
 }
+
+
+
+p {
+    font-family: 'Dosis',sans-serif;
+    margin-top: 8.5%;
+    margin-left: 30%;
+    background-color:turquoise;
+    border-radius:20px;
+    color: whitesmoke;
+    font-size: 25px;
+    border-color: black;
+}
+
 
 #name, #email, #number {
     display: block;
-    width: 30%;
-    font-size: 15px;
+    width: 35%;
+    font-size: 17px;
     line-height: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dosis', sans-serif;
     margin-bottom: 1vh;
     margin-left: 10%;
     border: none;
@@ -61,20 +115,35 @@ p {
     outline: none;
 }
 #submit {
+    display: flexbox;
     background-color: turquoise;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Dosis',sans-serif;
     border-radius: 50px;
-    border-color: thistle;
-    font-size: 15px;
+    border-color: whitesmoke;
+    font-size: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+#submit:hover {
+    background-color: violet;
+}
+
+#submit:active {
+    background-color: violet;
+    box-shadow: 0 5px turquoise;
+    transform: translateY(4px);
 }
 
 h4 {
     margin-left: 0%;
+    font-size: 20px;
 }
 
 label {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Dosis',sans-serif;
     margin-left: 10%;
+    font-size: 20px;
 }
 
 #dropdown-label #sex-label {
@@ -82,10 +151,11 @@ label {
 }
 
 .tick {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Dosis',sans-serif;
     margin-left: 10%;
     max-width: 100%;
     height: auto;
+    font-size: 17px;
 }
 
 textarea {
@@ -96,6 +166,7 @@ textarea {
     margin-left: 10%;
     margin-bottom: 5%;
 }
+
 
 footer {
     font-family: 'Poppins',sans-serif;
