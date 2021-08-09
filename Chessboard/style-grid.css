@@ -2,6 +2,7 @@
 
 body {
     background-image: url(bg.png);
+    background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     grid-template-areas: 
@@ -9,6 +10,8 @@ body {
 }
 
 h1 {
+    min-width: 500px !important;
+    display: grid;
     margin-left: 10%;
     font-family: 'Fredoka One', cursive;
     font-size: 70px;
@@ -18,19 +21,20 @@ h1 {
 }
 
 button {
+    display: grid;
     font-size: 40px;
     color: pink;
     background-color: purple;
     border-radius: 20px;
     font-family: 'Fredoka One',cursive;
-    margin-left: 40%;
-    
+    margin-left: 40%; 
 }
 
 .chessboard {
     background-color: plum;
     border-color: turquoise;
     border-radius: 20px;
+    border: 20px;
     height: 640px;
     width: 640px;
     margin-top: 5%;
