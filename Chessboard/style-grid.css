@@ -3,7 +3,7 @@
 body {
     background-image: url(bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     display: grid;
     grid-template-areas: 
     "auto h1 chessboard";
