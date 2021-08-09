@@ -16,7 +16,7 @@ h1 {
     display: grid;
     margin-left: 10%;
     font-family: 'Fredoka One', cursive;
-    font-size: 70px;
+    font-size: 4vw;
     color: pink;
     text-shadow: 
     0 4px 0 purple;
@@ -37,8 +37,8 @@ button {
     border-radius: 20px;
     border-style:solid;
     border: 20px solid purple;
-    height: 640px;
-    width: 640px;
+    height: 40vw;
+    width: 40vw;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
