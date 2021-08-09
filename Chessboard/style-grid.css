@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    background-image: url(bg.png);
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "auto h1 chessboard";
+}
+
+h1 {
+    margin-left: 10%;
+    font-family: 'Fredoka One', cursive;
+    font-size: 70px;
+    color: pink;
+    text-shadow: 
+    0 4px 0 purple;
+}
+
+button {
+    font-size: 40px;
+    color: pink;
+    background-color: purple;
+    border-radius: 20px;
+    font-family: 'Fredoka One',cursive;
+    margin-left: 40%;
+    
+}
+
+.chessboard {
+    background-color: plum;
+    border-color: turquoise;
+    border-radius: 20px;
+    height: 640px;
+    width: 640px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(8,80px);
+    grid-template-rows: repeat(8,80px);
+    text-shadow: 
+    0 2px turquoise;
+}
+.black {
+    font-size: 60px;
+    color: rgb(250, 128, 114);
+    background-color: rgb(87, 22, 153);
+   text-align: center;
+}
+.white {
+    font-size: 60px;
+    color: rgb(250, 128, 114);
+    text-align: center;
+}
