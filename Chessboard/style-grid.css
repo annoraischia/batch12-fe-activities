@@ -3,7 +3,8 @@
 body {
     background-image: url(bg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
     display: grid;
     grid-template-areas: 
     "auto h1 chessboard";
@@ -32,28 +33,28 @@ button {
 
 .chessboard {
     background-color: plum;
-    border-color: turquoise;
     border-radius: 20px;
-    border: 20px;
+    border-style:solid;
+    border: 20px solid purple;
     height: 640px;
     width: 640px;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(8,80px);
-    grid-template-rows: repeat(8,80px);
+    grid-template-columns: repeat(8,12.5%);
+    grid-template-rows: repeat(8,12.5%);
     text-shadow: 
     0 2px turquoise;
 }
 .black {
-    font-size: 60px;
+    font-size: 3.5vw;
     color: rgb(250, 128, 114);
     background-color: rgb(87, 22, 153);
    text-align: center;
 }
 .white {
-    font-size: 60px;
+    font-size: 3.5vw;
     color: rgb(250, 128, 114);
     text-align: center;
 }
