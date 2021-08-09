@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    max-width: 100%;
     display: grid;
     grid-template-areas: 
     "auto h1 chessboard";
