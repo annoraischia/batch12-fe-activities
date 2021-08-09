@@ -24,7 +24,7 @@ h1 {
 
 button {
     display: grid;
-    font-size: 40px;
+    font-size: 3vw;
     color: pink;
     background-color: purple;
     border-radius: 20px;
