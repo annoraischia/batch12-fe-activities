@@ -58,6 +58,7 @@ body {
     width: 100vw;
     margin:auto;
     background-size: cover!important;
+    clip-path: ellipse(100% 55% at 48% 44%);
 }
 .background-overlay {
     background: linear-gradient(to right, rgba(12, 12, 179, 0.452)0%,rgba(12, 12, 179, 0.849)100%);
