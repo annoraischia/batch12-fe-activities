@@ -182,13 +182,13 @@ h2 {
     background-image: linear-gradient(to left,rgb(11, 11, 119),rgba(12, 12, 179, 0.849),white);
     height: 75%;
     display: grid;
-    /* clip-path: ellipse(100% 55% at 48% 44%); */
+    clip-path: circle(56.2% at 50% 50%);
     grid-template-areas: ".distr auto .right";
 }
 .left {
     height: 75%;
     width: auto;
-    margin-left: 10%;
+    margin-left: 22.5%;
     
 } 
 .right {
@@ -197,7 +197,7 @@ h2 {
     align-items:flex-start;
     justify-content: center;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 12%;
 }
 button {
 border: 1px solid #3498db;
@@ -209,4 +209,18 @@ color: white;
 transition: 0.8s;
 border-radius: 10px;
 margin-bottom: 10%;
+}
+.Contact {
+    display: grid;
+    grid-template-areas: "form .     video";
+    height:75%;
+    margin-top: 10%;
+}
+.form {
+    padding: 50;
+    border: dotted 1px white;
+    margin-left: 10%;
+}
+.video {
+    margin-left: 10%;
 }
