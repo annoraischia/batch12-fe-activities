@@ -1,0 +1,21 @@
+body {
+    background-color:rgb(11, 11, 119);
+}
+.wrapper {
+display: grid;
+grid-template-areas: "auto img ty";
+}
+img {
+    padding: 10%;
+    height: 50vh;
+}
+#ty {
+    font-size: 2vw;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-top: 20%;
+}
+#back {
+    font-size: 1vw;
+}
