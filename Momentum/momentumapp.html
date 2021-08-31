@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/icon.png">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="clear"></div>
+    <div class="main">
+        <div class="intro">
+            <div class="inputname">
+                <form id="input" onclick="submit" autocomplete="off">
+                <span>Hi, what's your name?</span>
+                <input type="text" id="user">
+                <button onclick="changeDiv()"></button>
+                </form>
+            </div>
+        </div>
+        <div class="core-container">
+            <div class="currenttime">
+                <span id="time"></span>  
+            </div>
+            <div id="greeting"></div>
+            <div class="focus">
+                <form id="focusForm" onclick="submit" autocomplete="off">
+                    <h1>What is your main focus for today?</h1>
+                    <input type="text" id="focusName">
+                    <button onclick="check()"></button>
+                </form>
+                <div id="today"></div>
+            </div>
+        <div class="quotes"></div>
+        <div class="optionwrapper">
+            <div class="optionflex">
+                <p class="generatequote">New Quote</p>
+                <p class="createquote">Add Quote</p>
+            </div>
+        </div>
+        </div>
+        <div class="todo"></div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
