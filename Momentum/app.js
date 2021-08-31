@@ -58,7 +58,7 @@ function saveState() {
     event.preventDefault();
   });
   //Transforms focus item into a checkbox and edits the headline
-  function check() {
+  function checkbox() {
   var a = document.querySelector("#focusForm");
   var b = document.querySelector("#today");
   
@@ -68,8 +68,8 @@ function saveState() {
     b.style.display = "block";
   }
   }
+
   let inputFocus = document.querySelector("#focusName")
-  
   document.getElementById("today")
     .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" + "<form id='checkbox'>" + 
     "<input type='checkbox' name ='focus' value='focus' id='box'>" + "<span class='checkbox-custom'></span>" + "&nbsp;" +
