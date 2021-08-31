@@ -89,12 +89,12 @@ h1 {
     background: blue;
     text-transform: uppercase;
     display: flex;
-    justify-content:right;
+    justify-content:left;
     align-items: flex-end;
     border-radius: 3vw;
     }
 .btn-holder {
-    float: right;
+    float: left;
 }
 .cta-col {
     margin-bottom: 15px;
@@ -166,7 +166,7 @@ h2 {
     width: 20vw;
 }
 .btnp {
-    text-align: center;
+    text-align: center; 
 }
 #btnpp {
     border: 1px solid #3498db;
@@ -220,6 +220,8 @@ margin-bottom: 10%;
 .form {
     padding: 50;
     border: dotted 1px white;
+    background-color: white;
+    color: darkblue;
     margin-left: 10%;
 }
 .video {

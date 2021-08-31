@@ -1,0 +1,27 @@
+
+
+@media (max-width:768px) {
+    .nav-bar {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+}
+
+
+#info {
+    margin-top: 2%;
+    font-size: 6vw;
+    display: flex;
+    align-items: center;
+}
+.infowrapper {
+    background-image: linear-gradient(to left,rgb(11, 11, 119),rgba(12, 12, 179, 0.849),white,white)!important;
+    height: 45.300261096605745vh;
+}
