@@ -87,7 +87,7 @@ addButton.onclick = function(){
   quote.innerHTML = "<input type='text' id='newquoteline'>"
 }
 
-//To-Do
+//To-Do Logic
 let inputField = document.getElementById('inputField')
 let todoList = document.querySelector(".todoList")
 
