@@ -116,9 +116,10 @@ input[type="submit"] {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #box {
-    /* opacity: 0; */
+    opacity: 0;
     cursor: pointer;
 }
 .checkbox-custom {
@@ -154,6 +155,10 @@ input[type="submit"] {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+#checkbox .checkbox-custom :checked~span.strikethrough {
+    text-decoration: line-through;
+    color: gray;
+}
 .quotes {
     display: flex;
     flex-direction: column;
@@ -162,6 +167,7 @@ input[type="submit"] {
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
     color: white;
+    padding-top: 2%;
 }
 .optionflex {
     display: flex;
@@ -187,4 +193,14 @@ input[type="submit"] {
     color: whitesmoke;
     text-align: center;
     display:block;
+}
+#to-do {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    font-family: 'Nunito', sans-serif; 
+    font-size: 1rem;
+    color: white;
+    cursor: pointer ;
 }

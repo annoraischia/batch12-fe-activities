@@ -16,7 +16,7 @@
                 <form id="input" onclick="submit" autocomplete="off">
                 <span>Hi, what's your name?</span>
                 <input type="text" id="user">
-                <button onclick="changeDiv()"></button>
+                <button id="changeDiv" onclick="changeDiv()"></button>
                 </form>
             </div>
         </div>
@@ -42,9 +42,15 @@
                 <p onclick="submit" class="createQuote">Add Quote</p>
             </div>
         </div>
+        <div class="todo">
+            <span onclick="toggle" id="to-do">To-do</span>
+            <div id="todoList">
+                <input id="inputField" type="text">
+            </div>
         </div>
-        <div class="todo"></div>
+        </div>
     </div>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./todo.js"></script>
 </body>
 </html>

@@ -21,7 +21,6 @@ input.addEventListener('submit',(event) => {
 });
 let inputName = document.querySelector("#user");
 
-
 //Hide Intro Div and Show Core Div
 function changeDiv() {
   var x = document.querySelector(".intro");
@@ -75,6 +74,14 @@ document.getElementById("today")
   "<input type='checkbox' name ='focus' value='focus' id='box'>" +
   "<span class='checkbox-custom'></span>" + "&nbsp;" + inputFocus.value +"</form>"
 }
+let box = document.querySelector(".checkbox-custom")
+let focusItem = document.querySelectorAll("#text")
+let form = document.querySelectorAll("#checkbox")
+
+focusItem.onclick = function(){
+  form.innerHTML = "<input type='text' id='newfocus'>"
+}
+
 //Quotes
 let button = document.querySelector(".generateQuote")
 let addButton = document.querySelector(".createQuote")
