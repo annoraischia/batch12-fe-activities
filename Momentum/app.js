@@ -70,9 +70,7 @@ if (b.getAttribute("display") === null) {
 
 let inputFocus = document.querySelector("#focusName")
 document.getElementById("today")
-  .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" + "<form id='checkbox'>" + 
-  "<input type='checkbox' name ='focus' value='focus' id='box'>" +
-  "<span class='checkbox-custom'></span>" + "&nbsp;" + inputFocus.value +"</form>"
+  .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" + "<form id='checkbox' contenteditable='true'>" + "&nbsp;" + inputFocus.value +"</form>"
 }
 let box = document.querySelector(".checkbox-custom")
 let focusItem = document.querySelectorAll("#text")
@@ -95,24 +93,44 @@ addButton.onclick = function(){
 }
 
 //To-Do
+let inputField = document.getElementById('inputField')
+let todoList = document.querySelector(".todoList")
+
+let addToDo = (e) => {
+  if (e.which === 13){
+    let item = document.createElement('li')
+    let close = document.createElement('span')
+    let spanText = document.createElement('span')
+    spanText.innerHTML = e.target.value
+
+    close.innerHTML = "&#x2715"
+    close.classList.add('remove')
+
+    item.appendChild(spanText)
+    item.appendChild(close)
+    todoList.appendChild(item)
+    
+    let removeItems = document.querySelectorAll('.remove')
+    let list = document.querySelectorAll('li span:nth-child(1)')
+
+    removeItems[removeItems.length-1].addEventListener('click',function(){
+      this.parentNode.remove()
+    })
+    list[list.length-1].addEventListener('click',function(){
+      this.classList.toggle('selected')
+    })
+  }
+}
+inputField.addEventListener('keypress',addToDo)
+
+let toggle = document.getElementById('toggle')
+let todo = document.querySelector('.todoContainer')
+let showToggle = () => {
+  todo.classList.toggle('hidden')
+}
+
+toggle.addEventListener('click',showToggle)
 
 
-// let toDoContainer = document.getElementsByClassName("todoContainer")
-// let toggle = document.getElementById("toggle")
-// const toggleTodo = () => {
-//   toDoContainer.style.display === 'flex' ? 
-//   toDoContainer.style.display = 'none' : toDoContainer.style.display ='flex';
-// }
-// toggle.addEventListener('click', toggleTodo);
 
 
-
-let addToDoButton = document.getElementById("addToDo");
-let toDoContainer = document.getElementById('toDoContainer');
-let inputField = document.getElementById("inputField");
-
-addToDoButton.addEventListener('click', function() {
-  var paragraph = document.createElement('p')
-  paragraph.innerText = inputField.value;
-  toDoContainer.appendChild(paragraph);
-})
