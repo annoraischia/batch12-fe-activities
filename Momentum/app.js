@@ -56,6 +56,7 @@ let focusForm = document.getElementById("focusForm");
 focusForm.addEventListener('submit',(event) => {
   event.preventDefault();
 });
+
 //Transforms focus item into a checkbox and edits the headline
 function checkbox() {
 var a = document.querySelector("#focusForm");
@@ -68,16 +69,10 @@ if (b.getAttribute("display") === null) {
 }
 }
 
+//Makes focus editable
 let inputFocus = document.querySelector("#focusName")
 document.getElementById("today")
   .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" + "<form id='checkbox' contenteditable='true'>" + "&nbsp;" + inputFocus.value +"</form>"
-}
-let box = document.querySelector(".checkbox-custom")
-let focusItem = document.querySelectorAll("#text")
-let form = document.querySelectorAll("#checkbox")
-
-focusItem.onclick = function(){
-  form.innerHTML = "<input type='text' id='newfocus'>"
 }
 
 //Quotes
