@@ -204,17 +204,18 @@ input[type="submit"] {
     color: white;
     cursor: pointer ;
 }
-/* .todoContainer {
+.todoForm {
     width: 50vw;
 }
 #inputField {
+    font-family: 'Nunito', sans-serif;
     width: 10vw;
     border: none;
     border-bottom: oldlace;
     font-size: 1rem;
     vertical-align: middle;
-} */
-/* #addToDo {
+}
+#addToDo {
     width: 10vw;
     height: auto;
     border: none;
@@ -222,11 +223,9 @@ input[type="submit"] {
     font-size: 1rem;
     vertical-align: middle;
 }
-.to-dos {
-    margin-top: 25px;
+.todolist {
+    font-family: 'Nunito', sans-serif;
+    color: oldlace;
+    font-size: 1rem;
+
 }
-.paragraph-styling {
-    margin: 0;
-    cursor: pointer;
-    font-size: 20px;
-} */
