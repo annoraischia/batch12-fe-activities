@@ -95,6 +95,18 @@ addButton.onclick = function(){
 }
 
 //To-Do
+
+
+// let toDoContainer = document.getElementsByClassName("todoContainer")
+// let toggle = document.getElementById("toggle")
+// const toggleTodo = () => {
+//   toDoContainer.style.display === 'flex' ? 
+//   toDoContainer.style.display = 'none' : toDoContainer.style.display ='flex';
+// }
+// toggle.addEventListener('click', toggleTodo);
+
+
+
 let addToDoButton = document.getElementById("addToDo");
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById("inputField");
