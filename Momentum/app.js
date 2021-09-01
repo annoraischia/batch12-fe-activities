@@ -72,7 +72,8 @@ if (b.getAttribute("display") === null) {
 //Makes focus editable
 let inputFocus = document.querySelector("#focusName")
 document.getElementById("today")
-  .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" + "<form id='checkbox' contenteditable='true'>" + "&nbsp;" + inputFocus.value +"</form>"
+  .innerHTML = "<span id='todayheader'>" + "Today" + "</span>" +
+  "<form id='checkbox' contenteditable='true'>" + "&nbsp;" + inputFocus.value +"</form>"
 }
 
 //Quotes
