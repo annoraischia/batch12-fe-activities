@@ -6,13 +6,13 @@ const button = document.querySelector("#start")
 const intro = document.querySelector(".intro")
 const main = document.querySelector(".container")
 const gameGrid = document.querySelector(".game-grid")
-let history = document.querySelector(".history")
-let statusMoves = document.querySelector(".status-moves")
-let historyButton = document.querySelector("#history-button")
-let historyData = []
-let previous = document.querySelector(".previous")
-let next = document.querySelector(".next")
-let position = 0
+const history = document.querySelector(".history")
+const statusMoves = document.querySelector(".status-moves")
+const historyButton = document.querySelector("#history-button")
+const historyData = []
+const previous = document.querySelector(".previous")
+const next = document.querySelector(".next")
+const position = 0
 
 // Game Constants
 const xSymbol = '×';
@@ -129,10 +129,11 @@ const checkGameStatus = () => {
 const handleReset = () => {
   xIsNext = true;
   statusDiv.innerHTML = `${xSymbol} is next`;
-  for (const cellDiv of cellDivs) {
-    cellDiv.classList.remove('x');
-    cellDiv.classList.remove('o');
-    cellDiv.classList.remove('won');
+  gameGrid.innerHTML = ''
+  for (let i=0; i<9;i++) {
+    let cell = document.createElement("div")
+    cell.classList.add('grid-cell')
+    gameGrid.append(cell)
   }
   gameIsLive = true;
 };
@@ -185,22 +186,44 @@ for (const cellDiv of cellDivs) {
 }
 
 const previousButton = () => {
-      position -= 1
-      gameGrid.innerHTML = ''
-      for (let i=0; i<historyData[position].length;i++){
-          for (let j=0; j<historyData[position][i].length;j++) {
-                let cell = document.createElement("div")
-                let mark = historyData[position][i][j]
-                if(mark !== ''){
-                    cell.classList.add()
-                    cell.classList.add(historyData[position][i][j])
-                    gameGrid.append(cell)
-                }
-          }
-      }
+    if(position < historyData.length && position > 0){
+        position -= 1
+        gameGrid.innerHTML = ''
+        for (let i=0; i<historyData[position].length;i++){
+            for (let j=0; j<historyData[position][i].length;j++) {
+                    let cell = document.createElement("div")
+                    let mark = historyData[position][i][j]
+                    if(mark !== ''){
+                        cell.classList.add("grid-cell")
+                        cell.classList.add(historyData[position][i][j])
+                        gameGrid.append(cell)
+                    } else {
+                        cell.classList.add("grid-cell")
+                        gameGrid.append(cell)
+                    }
+            }
+        }
+        }
 }
-const nextButton = () => {
-    position += 1
+const nextButton = () => { console.log(position)
+    if(position < historyData.length-1 && position >= 0){
+        position += 1
+        gameGrid.innerHTML = ''
+        for (let i=0; i<historyData[position].length;i++){
+            for (let j=0; j<historyData[position][i].length;j++) {
+                    let cell = document.createElement("div")
+                    let mark = historyData[position][i][j]
+                    if(mark !== ''){
+                        cell.classList.add("grid-cell")
+                        cell.classList.add(historyData[position][i][j])
+                        gameGrid.append(cell)
+                    } else {
+                        cell.classList.add("grid-cell")
+                        gameGrid.append(cell)
+                    }
+            }
+        }
+        }
 }
 
 previous.addEventListener('click', previousButton)
