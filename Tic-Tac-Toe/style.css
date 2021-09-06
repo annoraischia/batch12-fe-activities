@@ -10,7 +10,7 @@
     display: flex;
     font-family: sans-serif;
     justify-content: center;
-    background-image: url(./assets/bg2.jpg);
+    background: purple;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -64,7 +64,9 @@
       border: 2px solid purple;
       cursor: pointer;
   }
-
+  #start:hover {
+      color: lightskyblue;
+  }
   .container {
     background: rgb(204, 201, 11);
     margin: 50px;
@@ -93,6 +95,12 @@
   }
   .status-moves {
       display: none;
+  }
+  #history-button {
+    font-family: "Nerko One", cursive;
+  }
+  .previous, .next {
+    font-family: "Nerko One", cursive;
   }
   .status span {
     color: #F2EBD3;
