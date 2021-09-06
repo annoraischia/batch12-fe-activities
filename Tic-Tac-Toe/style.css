@@ -8,9 +8,12 @@
     display: flex;
     font-family: sans-serif;
     justify-content: center;
+    background-image: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .container {
-    background: #14BDAC;
+    background: rgb(204, 201, 11);
     margin: 50px;
     padding: 50px;
     border-radius: 25px;
@@ -46,13 +49,13 @@
     margin-top: 50px;
   }
   .grid-cell {
-    background: #14BDAC;
+    background: rgb(204, 201, 11);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
   }
   .x,
   .o {
@@ -60,12 +63,12 @@
   }
   .x::after {
     content: '×';
-    font-size: 200px;
+    font-size: 100px;
   }
   .o::after {
     content: '○';
     color: #F2EBD3;
-    font-size: 225px;
+    font-size: 125px;
   }
   .won::after {
     color: #BD022F;
