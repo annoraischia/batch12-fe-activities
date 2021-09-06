@@ -28,7 +28,7 @@
   .title span {
     color: #F2EBD3;
   }
-  .status-action {
+  .status-bar {
     display: flex;
     margin-top: 25px;
     font-size: 25px;
@@ -65,6 +65,10 @@
   .x,
   .o {
     cursor: default;
+  }
+  .x,
+  .o:hover{
+    color: rgba(128, 255, 0, 0.582);
   }
   .x::after {
     content: '×';
