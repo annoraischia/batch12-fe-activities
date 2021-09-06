@@ -28,7 +28,7 @@
   .title span {
     color: #F2EBD3;
   }
-  .status-bar {
+  .status-bar, .status-moves {
     display: flex;
     margin-top: 25px;
     font-size: 25px;
@@ -39,10 +39,16 @@
   .status span {
     color: #F2EBD3;
   }
-  .reset {
+  .reset, .status-moves {
     cursor: pointer;
   }
   .reset:hover {
+    color: #F2EBD3;
+  }
+  .previous:hover {
+    color: #F2EBD3;
+  }
+  .next:hover {
     color: #F2EBD3;
   }
   .game-grid {
@@ -59,8 +65,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 125px;
-    width: 125px;
+    height: 110px;
+    width: 110px;
   }
   .x,
   .o {
