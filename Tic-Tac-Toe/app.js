@@ -2,15 +2,29 @@
 const statusDiv = document.querySelector('.status');
 const resetDiv = document.querySelector('.reset');
 const cellDivs = document.querySelectorAll('.grid-cell');
+const button = document.querySelector("#start")
+const intro = document.querySelector(".intro")
+const main = document.querySelector(".container")
+let history = []
 
-// Game constants
+// Game Constants
 const xSymbol = '×';
 const oSymbol = '○';
 
-// Game variables
+// Game Variables
 let gameIsLive = true;
 let xIsNext = true;
 
+//Homepage to Gameboard
+button.onclick = function(){
+    document.body.style.backgroundImage = "url('./assets/bg.jpg')"
+    if(intro.getAttribute("display") === null){
+        intro.style.display = "none";
+    if (main.getAttribute("display") === null) {
+        main.style.display = "block";
+    }
+    }
+}
 
 // Functions
 const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
@@ -35,7 +49,8 @@ const checkGameStatus = () => {
   const bottomMiddle = cellDivs[7].classList[1];
   const bottomRight = cellDivs[8].classList[1];
 
-  // Check winner
+  // Check Winner
+  
   if (topLeft && topLeft === topMiddle && topLeft === topRight) {
     handleWin(topLeft);
     cellDivs[0].classList.add('won');
@@ -115,6 +130,11 @@ const handleCellClick = (e) => {
   } else {
     classList.add('o');
     checkGameStatus();
+  }
+  for (let i=0; i<cellDivs.length; i++){
+      let row = []
+      let row2 = []
+      let row3 = []
   }
 };
 

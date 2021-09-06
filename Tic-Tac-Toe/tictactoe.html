@@ -9,6 +9,16 @@
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
+    <div class="intro">
+        <img id ="intro-img" src="assets/intro.png">
+        <div class="textbox">
+            <p>Sup homie, it's Joe. Welcome to the neighbourhood. <br> 
+                Can you handle the tic-tac-toe at the ghetto?</p>
+        </div>
+        <div class="start-game">
+            <br><button id="start">start game</button>
+        </div>
+    </div>
     <div class="container">
         <h1 class="title">TIC-<span>TAC-</span>YO!</h1>
         <div class="status-bar">
@@ -26,9 +36,11 @@
             <div class="grid-cell"></div>
             <div class="grid-cell"></div>
         </div>
-        <div class="status-moves">
-            <div class="previous">Previous</div>
-            <div class="next">Next</div>
+        <div class="history">
+            <div class="status-moves">
+                <div class="previous">Previous</div>
+                <div class="next">Next</div>
+            </div>
         </div>
     </div>
     <script src="app.js" type="text/javascript"></script>

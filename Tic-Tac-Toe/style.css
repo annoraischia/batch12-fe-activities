@@ -10,15 +10,67 @@
     display: flex;
     font-family: sans-serif;
     justify-content: center;
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
+  #intro-img {
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: right;
+      padding: 15%;
+  }
+  .intro {
+      background-image: purple;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .textbox {
+      font-family: 'Nerko One',cursive  ;
+      font-size: 1.5rem;
+      border: 2px solid white;
+      background-color: purple;
+      padding: 0;
+  }
+  .textbox {
+      color: white;
+      animation: type 3s steps(40);
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  @keyframes type {
+      0% {
+          width:0ch;
+      }
+      100% {
+          width:40ch;
+      }
+  }
+  #start {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nerko One', cursive;
+      font-size: 2rem;
+      padding: 5px;
+      color: purple;
+      border: 2px solid purple;
+      cursor: pointer;
+  }
+
   .container {
     background: rgb(204, 201, 11);
     margin: 50px;
     padding: 50px;
     border-radius: 25px;
+    display: none;
   }
   .title {
     text-align: center;
@@ -35,6 +87,12 @@
     justify-content: space-around;
     height: 30px;
     font-family: 'Nerko One', cursive;
+  }
+  .history {
+      display: none;
+  }
+  .status-moves {
+      display: none;
   }
   .status span {
     color: #F2EBD3;
