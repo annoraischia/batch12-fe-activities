@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Nerko+One&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +22,8 @@
   }
   .title {
     text-align: center;
+    font-family: 'Barrio', cursive;
+    font-size: 3rem;
   }
   .title span {
     color: #F2EBD3;
@@ -30,6 +34,7 @@
     font-size: 25px;
     justify-content: space-around;
     height: 30px;
+    font-family: 'Nerko One', cursive;
   }
   .status span {
     color: #F2EBD3;
@@ -41,7 +46,7 @@
     color: #F2EBD3;
   }
   .game-grid {
-    background: #0DA192;
+    background: url(./assets/grid1.jfif);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -54,8 +59,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    height: 125px;
+    width: 125px;
   }
   .x,
   .o {
