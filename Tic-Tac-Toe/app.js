@@ -5,14 +5,14 @@ const cellDivs = document.querySelectorAll('.grid-cell');
 const button = document.querySelector("#start")
 const intro = document.querySelector(".intro")
 const main = document.querySelector(".container")
-const gameGrid = document.querySelector(".game-grid")
-const history = document.querySelector(".history")
-const statusMoves = document.querySelector(".status-moves")
-const historyButton = document.querySelector("#history-button")
-const historyData = []
-const previous = document.querySelector(".previous")
-const next = document.querySelector(".next")
-const position = 0
+let gameGrid = document.querySelector(".game-grid")
+let history = document.querySelector(".history")
+let statusMoves = document.querySelector(".status-moves")
+let historyButton = document.querySelector("#history-button")
+let historyData = []
+let previous = document.querySelector(".previous")
+let next = document.querySelector(".next")
+let position = 0
 
 // Game Constants
 const xSymbol = '×';
