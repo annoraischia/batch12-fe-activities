@@ -12,44 +12,34 @@ let historyButton = document.querySelector("#history-button")
 let historyData = []
 let previous = document.querySelector(".previous")
 let next = document.querySelector(".next")
+let cell = document.createElement("div");
 let position = 0
-
 // Game Constants
 const xSymbol = '×';
 const oSymbol = '○';
-
 // Game Variables
 let gameIsLive = true;
 let xIsNext = true;
-
 //Homepage to Gameboard
 button.onclick = function(){
-    document.body.style.backgroundImage = "url('./assets/bg.jpg')"
-    if(intro.getAttribute("display") === null){
-        intro.style.display = "none";
+  document.body.style.backgroundImage = "url('./assets/bg.jpg')"
+  if(intro.getAttribute("display") === null){
+    intro.style.display = "none";
     if (main.getAttribute("display") === null) {
-        main.style.display = "block";
+      main.style.display = "block";
     }
-    }
+  }
 }
-
 //History button to show previous and next buttons
 historyButton.onclick = function(){
-    statusMoves.classList.toggle("status-moves")
+  statusMoves.classList.toggle("status-moves")
 }
-
 // Functions
 const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
-
 const handleWin = (letter) => {
     gameIsLive = false;
-  if (letter === 'x') {
     statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
-  } else {
-    statusDiv.innerHTML = `<span>${letterToSymbol(letter)} has won!</span>`;
-  }
-};
-
+  };
 const checkGameStatus = () => {
   const topLeft = cellDivs[0].classList[1];
   const topMiddle = cellDivs[1].classList[1];
@@ -60,9 +50,7 @@ const checkGameStatus = () => {
   const bottomLeft = cellDivs[6].classList[1];
   const bottomMiddle = cellDivs[7].classList[1];
   const bottomRight = cellDivs[8].classList[1];
-
   // Check Winner
-  
   if (topLeft && topLeft === topMiddle && topLeft === topRight) {
     handleWin(topLeft);
     cellDivs[0].classList.add('won');
@@ -124,7 +112,6 @@ const checkGameStatus = () => {
     }
   }
 };
-
 // Event Handlers
 const handleReset = () => {
   xIsNext = true;
@@ -137,10 +124,8 @@ const handleReset = () => {
   }
   gameIsLive = true;
 };
-
 const handleCellClick = (e) => {
   const classList = e.target.classList;
-
   if (!gameIsLive || classList[1] === 'x' || classList[1] === 'o') {
     return;
   }
@@ -151,81 +136,64 @@ const handleCellClick = (e) => {
     classList.add('o');
     checkGameStatus();
   }
-
 let row = []
 let row2 = []
-let row3 = []
-      
+let row3 = []  
 for (let i=0; i<cellDivs.length; i++){
-    let classes = cellDivs[i].classList 
-    let text = ''
-    if (classes.contains('x')) {
-        text = 'x'
-      } else if (classes.contains('o')){
-          text = 'o'
-      } else {
-          text = ''
-      }
-      if (i<3){
-          row.push(text)
-      } else if (i>=3 && i<6){
-          row2.push(text)
-      } else {
-          row3.push(text)
-      }
+  let classes = cellDivs[i].classList 
+  let text = ''
+  if (classes.contains('x')) {
+    text = 'x'
+  } else if (classes.contains('o')){
+    text = 'o'
+  } else {
+    text = ''
+  }
+  if (i<3){
+    row.push(text)
+  } else if (i>=3 && i<6){
+    row2.push(text)
+  } else {
+    row3.push(text)
+  }
   } historyData.push([row, row2, row3])
     position = historyData.length-1
     console.log(position, historyData)
 }; 
-
 // Event Listeners
 resetDiv.addEventListener('click', handleReset);
-
 for (const cellDiv of cellDivs) {
   cellDiv.addEventListener('click', handleCellClick)
 }
-
+const updateHistory = () => {
+  for (let i=0; i<historyData[position].length;i++){
+    for (let j=0; j<historyData[position][i].length;j++) {
+      let cell = document.createElement("div")
+      let mark = historyData[position][i][j]
+      if(mark !== ''){
+        cell.classList.add("grid-cell")
+        cell.classList.add(historyData[position][i][j])
+        gameGrid.append(cell)
+      } else {
+        cell.classList.add("grid-cell")
+        gameGrid.append(cell)
+      }
+    }
+  }
+}
 const previousButton = () => {
-    if(position < historyData.length && position > 0){
-        position -= 1
-        gameGrid.innerHTML = ''
-        for (let i=0; i<historyData[position].length;i++){
-            for (let j=0; j<historyData[position][i].length;j++) {
-                    let cell = document.createElement("div")
-                    let mark = historyData[position][i][j]
-                    if(mark !== ''){
-                        cell.classList.add("grid-cell")
-                        cell.classList.add(historyData[position][i][j])
-                        gameGrid.append(cell)
-                    } else {
-                        cell.classList.add("grid-cell")
-                        gameGrid.append(cell)
-                    }
-            }
-        }
-        }
+  if(position < historyData.length && position > 0){
+    position -= 1
+    gameGrid.innerHTML = ''
+    updateHistory();
+  }
 }
 const nextButton = () => { console.log(position)
-    if(position < historyData.length-1 && position >= 0){
-        position += 1
-        gameGrid.innerHTML = ''
-        for (let i=0; i<historyData[position].length;i++){
-            for (let j=0; j<historyData[position][i].length;j++) {
-                    let cell = document.createElement("div")
-                    let mark = historyData[position][i][j]
-                    if(mark !== ''){
-                        cell.classList.add("grid-cell")
-                        cell.classList.add(historyData[position][i][j])
-                        gameGrid.append(cell)
-                    } else {
-                        cell.classList.add("grid-cell")
-                        gameGrid.append(cell)
-                    }
-            }
-        }
-        }
+  if(position < historyData.length && position > 0){
+    position += 1
+    gameGrid.innerHTML = ''
+    updateHistory();
+  }
 }
-
 previous.addEventListener('click', previousButton)
 next.addEventListener('click', nextButton)
-

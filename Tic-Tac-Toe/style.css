@@ -7,8 +7,10 @@
   }
   body {
     color: #545454;
-    display: flex;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background: purple;
     background-repeat: no-repeat;
@@ -154,6 +156,7 @@
   .won::after {
     color: #BD022F;
   }
+ 
   @media only screen and (max-width: 1024px) {
     .game-grid {
       margin-top: 25px;
