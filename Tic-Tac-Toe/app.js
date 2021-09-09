@@ -108,7 +108,7 @@ const checkGameStatus = () => {
     if (xIsNext) {
       statusDiv.innerHTML = `${xSymbol} is next`;
     } else {
-      statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
+      statusDiv.innerHTML = `${oSymbol} is next`;
     }
   }
 };
@@ -122,6 +122,7 @@ const handleReset = () => {
     cell.classList.add('grid-cell')
     gameGrid.append(cell)
   }
+  history.style.display = 'none';
   gameIsLive = true;
 };
 const handleCellClick = (e) => {
@@ -158,12 +159,11 @@ for (let i=0; i<cellDivs.length; i++){
   }
   } historyData.push([row, row2, row3])
     position = historyData.length-1
-    console.log(position, historyData)
 }; 
 // Event Listeners
 resetDiv.addEventListener('click', handleReset);
 for (const cellDiv of cellDivs) {
-  cellDiv.addEventListener('click', handleCellClick)
+  cellDiv.addEventListener('click', handleCellClick) 
 }
 const updateHistory = () => {
   for (let i=0; i<historyData[position].length;i++){
@@ -188,7 +188,7 @@ const previousButton = () => {
     updateHistory();
   }
 }
-const nextButton = () => { console.log(position)
+const nextButton = () => {
   if(position < historyData.length && position > 0){
     position += 1
     gameGrid.innerHTML = ''
